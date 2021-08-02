@@ -1,0 +1,327 @@
+Buổi 1: Khai giảng
+
+- Tại sao lại học livestream
+	+ Cùng tương tác
+	+ Cùng học với các bạn
+	+ Không muốn các bạn học lướt
+
+- Học livestream:
+	+ Đặt câu hỏi luôn
+	+ Sắp xếp thời gian: 20h30
+	+ Gián đoạn
+	+ Học: ngồi ở bàn học, hai màn hình
+	+ Lượng kiến thức cực nhiều, vất vả
+	+ Làm bài tập đầy đủ
+	+ Phần lí thuyết:
+		. Buồn ngủ
+		. Thuật ngữ.
+	+ Thực hành:
+		. Bài tập lớn
+	+ Điểm danh:
+		. Theo dõi tiến độ học
+
+- Phần mềm:
+	+ Code editor: sublime text 3, Visual studio code 
+	+ Photoshop cs6: Phầm mềm đồ họa => Học photoshop => sử dụng => front-end
+	+ Illustrator: giống cs6
+	+ Back-end: 
+		. Linux: lamp server
+		. Window: Xamp server
+	+ Git, npm, composer...
+
+- Cố gắng
+	+ HTML => CSS
+
+------------------------------------------------------
+
+Buổi 2: HTML
+
+- Tạo file index.HTML
+- Chạy vào file index trước trong WebSever
+- Cấu trúc html
+	+ Gồm các thẻ <tên thẻ>
+	+ Có hai loại thẻ 
+		. Thẻ mở: <tên thẻ>
+		. Thẻ đóng: <tên thẻ/>
+	+ Xuống dòng giống như dấu cách
+	+ Nhiều dấu cách bằng 1 dấu cách
+
+- Các loại thẻ html cơ bản:
+	+ 2 loại thẻ: 
+		. Thẻ nội dung:
+			+ p
+			+ h
+			+ img
+			+ a
+			+ li
+			+ input
+			+ select
+			+ button
+		. Thẻ bao
+			+ div
+			+ header
+			+ footer
+			+ sidebar
+			+ span
+			+ ul
+
++ p: paragraph
++ h: heading: h1 -> h6
++ img: image
+	+ src: source
++ a: href -> link
++ ul: un-order list: danh sách không sắp xếp
++ ol: order list: danh sách sắp xếp
++ form
++ input
+	+ text
+	+ password
+	+ button
+	+ checkbox
+	+ radio
++ select
+	+ option
++label: nhãn
+
++ div: xác định một vùng trên trang web
++ header: giống như thẻ div nhưng xác định phần đầu của trang web (như nhau cả)
++ footer
++ sidebar
++ span: xét về ngữ nghĩa: không có tác dụng nhưng có nghĩ trong câu văn để chỉnh sửa css về 1 từ, chữ
++ br: break : xuống dòng
+
+=> Dùng dev tools để làm web -> inspect
+
+- Không cần nhớ hết các thẻ: sup, sub.....
+
+- Box model: là mô hình của 1 element (cặp thẻ html: h,a,p...): mô hình hộp
+	+ Mô hình hộp:
+		+ Tất cả các thành phần (element) trên trang web đều có mô hình chung: hình chữ nhật
+		+ Cấu tạo của hình chữ nhật:
+			. Margin: khoảng cách với element xung quanh
+				. Margin-top
+				. Margin-right
+				. Margin-left
+				. Margin-bottom
+			. Border: Đường viền element
+				. Border-top
+				. Border-right
+				. Border-left
+				. Border-bottom
+			. Padding: là khoảng cách giữa đường viền và thành phần con bên trong
+				. Padding-top
+				. Padding-right
+				. Padding-left
+				. Padding-bottom
+			. Width: chiều rộng
+			. Height: chiều cao
+
+- Xem mô hình box model
+
+- Mặc định khoảng không gian chiếm chỗ element = width/height + margin + border + padding.
+- Bài hôm sau cực kì quan trong 
+
+- Bài tập: Viết html của form mua hàng 
+	+ Điền tên
+	+ Điền địa chỉ 
+	+ Điền số điện thoại
+	+ Chọn giới tính
+	+ Chọn vùng miền: Hà Nội, Hồ Chí Minh, Đà Nẵng
+	+ Checkbox: đồng ý với điều khoản sử dụng
+	+ Button mua hàng/đặt hàng
+
+------------------------------------------------------
+
+Buổi 3: CSS
+
+- Selector: cách để chọn một hoặc nhiều element
+	+ Chọn theo thẻ
+	+ Chọn theo id: là thuộc tính của bất kì thẻ nào -> dấu #
+		+ Với id thi chỉ có một (only one)
+	+ Chọn theo class
+		+ Cũng giống như id
+		+ Được phép sử dụng nhiều 
+		+ sử dụng dấu chấm
+	+ Chọn thành phần con trực tiếp: >
+	+ Chọn theo nhiều điều kiện: viết các điều kiện liên tiếp nhau
+	+ Chọn nhiều element: dấu phẩy
+	+ Chọn theo thứ tự: 
+		. first-child: thành phần đầu tiên
+		. last-child: thành phần cuối cùng
+		. nth-child(x): thành phần thứ x
+		. nth-child(odd): thành phần li lẻ
+		. nth-child(even): thành phần li chẵn
+		. Sử dụng tham số n (n là số tăng dần từ 0 -> +oo)
+			+ nth-child(2n+1): thành phần li lẻ -> 1 3 5 7 9
+			+ nth-child(2n): thành phần li chẵn -> 2 4 6 8
+			+ nth-child(3n): thành phần li chia hết cho 3 -> 3 6 9
+		. Chọn theo thuộc tính: sử dụng dấu [thuoctinh="giatri"] rồi css
+		. Chọn 1 thành phần tiếp theo: id/class/nth-child(x) + li: phần tử tiếp theo tại vị trí x
+		. Chọn nhiều thành phần tiếp theo (nghĩa là từ nó trở đi bị ảnh hưởng css): 
+		id/class/nth-child(x) ~ li
+		. wildcat selector: *: tất cả
+		. :not(x/id/class/nth-child...): không phải x
+
+=>5 thuộc tính quan trọng nhất css
+- Bài hôm sau quan trọng nhất
+- Luyện tập dùng css để chọn element theo ý muốn
+
+------------------------------------------------------
+
+Buổi 4: Năm thuộc tính quan trọng nhất của css
+
+- Là những thuộc tính ảnh hưởng đến kích thước của element
+	+ width: là chiều rộng element
+		. Giá trị: px => chính xác
+		. Giá trị: % => % của element cha
+			+ position: fixed => % của body 
+
+	+ height: chiều cao của element
+		. Tự động dài ra theo nội dung bên trong (không đặt chiều cao)
+		. Giá trị: px => chính xác
+		. Giá trị: % => % của element cha
+
+	+ padding: padding element
+		. Khoảng cách giữa đường viền tới nội dung
+		. Giá trị: px, %
+			. Padding-top
+			. Padding-right
+			. Padding-left
+			. Padding-bottom
+		. Chỉ viết padding: x => cả 4 hướng đều là x
+				   padding: x y z t => top right bottom lefy
+				   padding: x y z => top (right left) bottom
+				   padding:	x y => (top bottom) (right left)
+
+	+ border: viền
+		. Cách viết tắt: border: [độ dày] [kiểu đường viền] [màu];
+		. Kiểu:
+			+ Solid: nét liền
+			+ doted: nét chấm
+			+ dashed: nét gạch
+
+		. border-top: [độ dày] [kiểu đường viền] [màu];
+		. border-right: [độ dày] [kiểu đường viền] [màu];
+		. border-left: [độ dày] [kiểu đường viền] [màu];
+		. border-bottom: [độ dày] [kiểu đường viền] [màu];
+
+		. border-width: độ dày
+			+ border-left-width: độ dày viền trái
+			+ border-right-width: độ dày viền phải
+			+ border-top-width: độ dày viền trên
+			+ border-bottom-width: độ dày viền dưới
+
+		. border-style: kiểu đường viền
+			+ border-left-style: kiểu viền trái
+			+ border-right-style: kiểu viền phải
+			+ border-top-style: kiểu viền trên
+			+ border-bottom-style: kiểu viền dưới
+
+		. border-color: màu đường viền
+			+ border-left-color: màu viền trái
+			+ border-right-color: màu viền phải
+			+ border-top-color: màu viền trên
+			+ border-bottom-color: màu viền dưới
+
+	+ box - sizing: quy định cách mà trình duyệt tính toán kích thước element
+	+ Mặc định: 
+		. Content-box:
+			+ rộng = border + padding + width
+			+ dài  = border + padding + height
+		. Border-box:
+			+ rộng = width;
+			+ Dài  = height
+	+ Margin: khoảng cách của element nội tại với element xung quanh
+		. Giá trị: px, %
+			. Margin-top
+			. Margin-right
+			. Margin-left
+			. Margin-bottom
+		. Chỉ viết Margin: x => cả 4 hướng đều là x
+				   Margin: x y z t => top right bottom lefy
+				   Margin: x y z => top (right left) bottom
+				   Margin:	x y => (top bottom) (right left)
+
+=> Tổng kết lại: margin, padding, width, height, box-sizing, border;
+
+- Display: block và inline:
+	+ Tất cả các thẻ html chia làm hai loại:
+		. Block element:
+			+ Là element mặc định rộng 100%
+			+ Nằm trên 1 hàng riêng
+			+ Block element dùng để chưa block hoặc inline element khác
+			+ Thẻ block: div, h, p, ul, ol, li, header, footer, sidebar...
+			+ Có thể xác định width, height cho nó
+
+		. Inline element
+			+ Là element mặc định rộng bằng nội dung của nó
+			+ Inline element chỉ chứa được inline element
+			+ Inline element nằm trên cùng 1 hàng => muốn xuống dòng thì set block hoặc nằm trong block
+			+ Thẻ Inline: a, span, label, input, button, select
+			+ Riêng thẻ img có trình duyệt hiểu là block, có trình duyệt hiểu là inline => định nghĩa lại là block hay inline, có lúc là block có lúc là inline
+			+ Không thể xác định width và height
+
+		. Inline-block: Hiển thị trên 1 dòng như inline nhưng có thể đặt width và height cho nó
+
+=> Luyện tập
+	+ Sắp xếp các element
+	+ Thử code để hiểu về block và inline
+	+ Học thuộc những thẻ nào là block và thẻ nào là inline
+
+------------------------------------------------------
+
+Buổi 5: Float
+
+- Tất cả thành phần trên trạng web có xu hướng chạy lên phía trên 
+	+ Nếu là thành phần inline thì chạy sang bên trái
+
+- Float: là một thuộc tính định nghĩa cho element trôi về phía nào
+	+ Khi float làm thế nào để không bị xuống dòng?
+		. Đặt phần trăm
+		. Sử dụng fix 1 bên. Ví dụ (calc(100% - 300px)) => 1 bên luôn fix, 1 bên di chuyển theo %
+
+- Basic layout
+	+ 2 cột
+	+ 3 cột
+
+- Clear:
+	+ xóa sự ảnh hưởng của các thành phần phía trước
+	+ left
+	+ right
+	+ both: cả hai left và right
+
+- Khi một thành phần con float thì thành phần cha không thể tính toán được chiều cao
+
+- Rest css: Mỗi trình duyệt có những thuộc tính mẵ định khác nhau
+		* {
+		    padding: 0px;
+	=>	    margin: 0px;
+		    box-sizing: border-box;
+		}
+
+=> Dựng layout những trang web đã có 
+
+=> Bài tập: làm 1 layout trang web mà ban thích
+
+
+------------------------------------------------------
+
+Buổi 6: Chữa bài
+
+Buổi 7: Flex-box
+
+- Không chắc chắn chạy được trên 100% trình duyệt
+- Flex là mô hình hình dàn trang phổ biến trên mobile app, android, ios
+- js, vue (react) => react native (mobile)
+
+- Để sử dụng flex thì ta dùng display: flex cho thành phần cha
+- flex-grow: 
+	+ Định nghĩa việc lớn lên của flex-item
+	+ Là tỉ lệ phân chia phần thừa còn lại của cha
+
+- flex-shrink:
+	+ Ngược lại với flex-grow
+	+ Là tỉ lệ phân chia phần thiếu
+
+
+
